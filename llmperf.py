@@ -17,6 +17,7 @@ FRAMEWORKS = [
     "perplexity",
     "together",
     "vllm",
+    "octoml",
 ]
 
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
@@ -102,7 +103,7 @@ def validate(ep_config, sample_lines):
     id = None
     st = et = ttft = 0
     if ep_config["framework"] in [
-        "anyscale",
+        "octoml" "anyscale",
         "openai",
         "fireworks",
         "perplexity",
@@ -426,6 +427,9 @@ if __name__ == "__main__":
     elif args.framework == "perplexity":
         endpoint_config["api_base"] = os.environ["PERPLEXITY_API_BASE"]
         endpoint_config["api_key"] = os.environ["PERPLEXITY_API_KEY"]
+    elif args.framework == "octoml":
+        endpoint_config["api_base"] = os.environ["OCTOML_API_BASE"]
+        endpoint_config["api_key"] = os.environ["OCTOML_API_KEY"]
     elif args.framework == "together":
         import requests, sseclient
 

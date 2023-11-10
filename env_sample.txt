@@ -1,3 +1,7 @@
+#OctoML Endpoint
+OCTOML_API_BASE="https://console.endpoints.anyscale.com/m/v1"
+OCTOML_API_KEY="secret_xxxxx"
+
 #Anyscale Endpoint
 ANYSCALE_API_BASE="https://console.endpoints.anyscale.com/m/v1"
 ANYSCALE_API_KEY="secret_xxxxx"
